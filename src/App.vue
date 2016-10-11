@@ -95,11 +95,14 @@ body {
 
 .rss-content {
   width: 100%;
+  margin-left: 180px;
 }
 
 .rss-menu {
   background: #EFEFEF;
+  position: fixed;
 }
+
 .rss-tabs {
   width: 220px;
   padding: 0 20px;
