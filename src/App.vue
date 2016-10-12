@@ -8,28 +8,28 @@
         </ul>
       </div>
       <div class='discover'>
-        <button class='discover-button'>DISCOVER AND FOLLOW</button>
+        <button v-link="{ path: '/discover', replace: true }" class='discover-button'>DISCOVER AND FOLLOW</button>
       </div>
       <div class='top-menu-button-list'>
         <ul class='button-list'>
           <li class='fa fa-bars fa-6'>
-            <a>All</a>
+            <a v-link="{ path: '/all', replace: true }">All</a>
           </li>
           <li class='fa fa-circle-thin'>
-            <a>Blogs</a>
+            <a v-link="{ path: '/blog', replace: true }">Blogs</a>
           </li>
           <li class='fa fa-circle-thin'>
-            <a>My Favorites Podcasts</a>
+            <a v-link="{ path: '/favorites', replace: true }">My Favorites Podcasts</a>
           </li>
           <li class='fa fa-circle-thin'>
-            <a>Uncategorized</a>
+            <a v-link="{ path: '/uncategorized', replace: true }">Uncategorized</a>
           </li>
         </ul>
       </div>
       <div class='buttom-menu-button-list'>
         <ul class='button-list'>
           <li class='button-tab'>
-            <a>Organize sources</a>
+            <a v-link="{ path: '/organize', replace: true }">Organize sources</a>
           </li>
           <li class='fa fa-rocket'>
             <a>Integrations</a>
@@ -59,18 +59,13 @@
       </div>
     </div>
   </div>
-  <rss-content></rss-content>
+  <router-view
+    class="view"
+    keep-alive
+    transition
+    transition-mode="out-in">
+  </router-view>
 </template>
-
-<script>
-import RssContent from './components/RssContent'
-
-export default {
-  components: {
-    RssContent
-  }
-}
-</script>
 
 <style lang="less">
 html {

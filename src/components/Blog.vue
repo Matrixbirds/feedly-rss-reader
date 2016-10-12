@@ -2,21 +2,21 @@
   <div class='rss-content'>
     <div class='container'>
       <header class='rss-content-top'><h1>Rss Vue Demo</h1></header>
-        <div class='rss-resources'>
-          <h5>资源的标题</h5>
-          <div class='rss-item' v-for='item in items'>
-            <div class='thumbnail' :style="{'background-image': 'url('+item.thumbnail+')'}"></div>
-            <div class='item-body'>
-              <div class='item-title'><h5 class='title'>{{ item.title }}</h5></div>
-              <p class='paragraph gray'>
-                {{ item.paragraph }}
-              </p>
-              <div class='item-footer'>
-                <h6>{{ item.author }} 2015/01/03</h6>
-              </div>
+      <div class='rss-resources'>
+        <h5>Blog</h5>
+        <div class='rss-item' v-for='item in items'>
+          <div class='thumbnail' :style="{'background-image': 'url('+item.thumbnail+')'}"></div>
+          <div class='item-body'>
+            <div class='item-title'><h5 class='title'>{{ item.title }}</h5></div>
+            <p class='paragraph gray'>
+              {{ item.paragraph }}
+            </p>
+            <div class='item-footer'>
+              <h6>{{ item.author }} 2015/01/03</h6>
             </div>
           </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
@@ -39,9 +39,6 @@ export default {
     text-align: center;
   }
 
-  .container {
-    height: 100%;
-  }
 
   .title {
     color: #333333;
