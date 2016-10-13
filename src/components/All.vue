@@ -65,7 +65,7 @@ export default {
   },
   route: {
     data ({ to }) {
-      return this.$http.get('http://yuguo.us/feed.xml')
+      return this.$http.get('https://yuguo.us/feed.xml')
         .then((res) => {
           return res.blob()
         })
