@@ -1,0 +1,99 @@
+@import "./mixin";
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome.scss";
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    background: #fff;
+}
+
+.menu {
+    display: table-row-group;
+    background: rgb(240, 240, 240);
+}
+
+.cell {
+    display: table-cell;
+    padding: 0 1em;
+    width: 250px;
+}
+
+.row {
+    display: table-row;
+}
+
+.fas {
+    font-family: FontAwesome;
+    font-style: inherit;
+}
+
+.pin {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.pined {
+    width: 3.5em;
+    .cell {
+        display: none;
+    }
+}
+
+.layout {
+    flex-direction: column;
+    flex: 1;
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    height: 53px;
+    background-color: #fff;
+    box-shadow: 1px 0 0 1px rgba(0,0,0,.05);
+    justify-content: space-between;
+    flex-direction: row;
+    .column {
+        align-self: flex-end;
+        flex: 1;
+        display: flex;
+    }
+    .avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+    }
+}

@@ -1,6 +1,10 @@
 import React from 'react'
-export default () => (
-    <div>
-        <h2>my</h2>
-    </div>
-)
+export default class My extends React.Component {
+    render () {
+        return (
+            <div>
+                <h2>my</h2>
+            </div>
+        )
+    }
+}
