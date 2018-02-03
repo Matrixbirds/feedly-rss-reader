@@ -5,7 +5,6 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import My from './my';
 import Saved from './saved';
@@ -61,7 +60,7 @@ const Nav = () => (
         <div className="column">UPGRADE</div>
         <div className="column">
             <input type="text" />
-            <img src={logo} class="avatar"/>
+            <img src={logo} class="avatar" alt="not found"/>
         </div>
     </div>
 )
