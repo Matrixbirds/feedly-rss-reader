@@ -2,26 +2,76 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome.scss";
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
 .container {
     flex: 1;
     display: flex;
     background: #fff;
 }
 
-.menu {
-    display: table-row-group;
-    background: rgb(240, 240, 240);
+button,
+input {
+    outline: 0;
+    border: none;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-bar {
+    flex: 1;
+    color: #757575;
+    background: rgb(240, 240, 240);
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+    a {
+        text-decoration: none;
+    }
+}
+
+.row-group {
+    color: #757575;
+    display: table-row-group;
+    background: rgb(240, 240, 240);
+    a {
+        text-decoration: none;
+    }
+}
+
+.menu-footer {
+        button {
+            background-color: #2bb24c;
+            width: 282px;
+            color: #fff;
+            font-size: 15px;
+            height: 50px;
+            &:hover {
+                background-color: #249540;
+            }
+        }
+    }
 .cell {
+    position: relative;
     display: table-cell;
     padding: 0 1em;
     width: 250px;
+    .cell-icon-right {
+        @include cell-icon;
+        right: 18px;
+        top: 21px;
+    }
+    .fas {
+        display: inline-block;
+        width: 15px;
+    }
+    .num {
+        font-size: 10px;
+        position: absolute;
+        right: 15px;
+        top: 5px;
+    }
 }
 
 .row {
@@ -37,16 +87,23 @@ $fa-font-path: "~font-awesome/fonts";
     display: flex;
     justify-content: flex-end;
     padding: 1em;
-    &:hover {
+    i:hover {
         cursor: pointer;
     }
 }
 
 .pined {
-    width: 3.5em;
+    width: 48px;
     .cell {
         display: none;
     }
+    .menu-footer {
+        display: none;
+    }
+}
+
+.subnav {
+    margin-top: 30px;
 }
 
 .layout {
@@ -67,7 +124,7 @@ $fa-font-path: "~font-awesome/fonts";
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 10em;
+        padding: 0 15rem;
         .grid {
             display: flex;
             align-items: center;
@@ -132,5 +189,6 @@ $fa-font-path: "~font-awesome/fonts";
     border: 1px solid #ff5722;
     border-radius: .25rem;
     color: #fff;
+    padding: 5px;
     font-size: 12px;
 }
