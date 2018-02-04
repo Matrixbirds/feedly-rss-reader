@@ -57,10 +57,18 @@ class Menu extends React.Component {
 
 const Nav = () => (
     <div className="nav">
-        <div className="column">UPGRADE</div>
         <div className="column">
-            <input type="text" />
-            <img src={logo} class="avatar" alt="not found"/>
+            <div className="grid">
+                <i className="fas fa-compress" />
+                <button className="red-button">UPGRADE</button>
+            </div>
+            <div className="grid">
+                <div className="search-text">
+                    <input type="text" placeholder="Search" />
+                    <i className="fas fa-search search-icon" />
+                </div>
+                <img src={logo} className="avatar" alt="not found"/>
+            </div>
         </div>
     </div>
 )

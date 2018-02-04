@@ -2,30 +2,6 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome.scss";
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -81,19 +57,80 @@ $fa-font-path: "~font-awesome/fonts";
 
 .nav {
     display: flex;
-    height: 53px;
     background-color: #fff;
     box-shadow: 1px 0 0 1px rgba(0,0,0,.05);
     justify-content: space-between;
     flex-direction: row;
     .column {
-        align-self: flex-end;
         flex: 1;
+        height: 60px;
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10em;
+        .grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            .fas {
+                margin-right: 1em;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            span:hover {
+                cursor: pointer;
+            }
+            .search-text {
+                position: relative;
+                input[type=text] {
+                    font-size: 15px;
+                    font-color: rgba(0,0,0,.15);
+                    padding: .5rem 2rem;
+                    width: 152px;
+                    -webkit-transition: width .2s;
+                    outline: 0;
+                    border: 1px solid rgba(0,0,0,.15);
+                    border-radius: .25rem;
+                    &:focus {
+                        border-color: #2bb24c;
+                        width: 400px;
+                    }
+                    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                        color: #9e9e9e;
+                    }
+                    &::-moz-placeholder { /* Firefox 19+ */
+                        color: #9e9e9e;
+                    }
+                    &::-ms-input-placeholder { /* IE 10+ */
+                        color: #9e9e9e;
+                    }
+                    &::-moz-placeholder { /* Firefox 18- */
+                        color: #9e9e9e;
+                    }
+                }
+                .search-icon {
+                    top: 10px;
+                    left: 10px;
+                    position: absolute;
+                }
+            }
+        }
     }
     .avatar {
-        width: 64px;
-        height: 64px;
+        width: 32px;
+        height: 32px;
+        margin: 10px;
+        border: 1px solid rgba(0,0,0,0.25);
         border-radius: 50%;
     }
+}
+
+.red-button {
+    outline: 0px;
+    background-color: #ff5722;
+    border: 1px solid #ff5722;
+    border-radius: .25rem;
+    color: #fff;
+    font-size: 12px;
 }
