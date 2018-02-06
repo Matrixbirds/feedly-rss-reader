@@ -33,9 +33,13 @@ class Menu extends React.Component {
         return Math.floor(Math.random() * (999 - 0) + 0)
     }
 
+    get menuClass () {
+        return "menu" + (this.state.isToggleOn ? ' pined' : '');
+    }
+
     render () {
         return (
-            <div className={"menu" + (this.state.isToggleOn ? ' pined' : '')}>
+            <div className={this.menuClass}>
                 <div className="menu-bar">
                     <div className="row">
                         <div className="pin">
