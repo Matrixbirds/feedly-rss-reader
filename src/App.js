@@ -49,7 +49,7 @@ class Menu extends React.Component {
                     {
                         routes.map((route, i) => (
                             <div className="row" key={i}>
-                                <Link className="cell" key={i}
+                                <Link className="cell-grid" key={i}
                                     to={route.path}>{route.i18n}
                                 </Link>
                             </div>
@@ -60,13 +60,13 @@ class Menu extends React.Component {
                         <div className="row">
                             <span className="cell">
                                 <h5>FEEDS</h5>
-                                <i class="fas fa-cog cell-icon-right" />
+                                <i className="fas fa-cog cell-icon-right" />
                             </span>
                         </div>
                     {
                         routes.map((route, i) => (
                             <div className="row" key={i}>
-                                <span className="cell">
+                                <span className="cell-grid">
                                     <i className={"fas "+
                                         (i == 0 ? "fa-angle-right" : "fa-angle-double-right")}                                     />
                                     <Link key={i}
@@ -88,7 +88,7 @@ class Menu extends React.Component {
                     {
                         routes.map((route, i) => (
                             <div className="row" key={i}>
-                                <span className="cell">
+                                <span className="cell-grid">
                                     <i className={"fas "+
                                         (i == 0 ? "fa-angle-right" : "fa-angle-double-right")}                                     />
                                     <Link key={i}

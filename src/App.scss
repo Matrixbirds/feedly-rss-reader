@@ -53,6 +53,7 @@ input {
             }
         }
     }
+.cell-grid,
 .cell {
     position: relative;
     display: table-cell;
@@ -73,6 +74,11 @@ input {
         right: 15px;
         top: 5px;
     }
+}
+
+.cell-grid:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+    cursor: pointer;
 }
 
 .row {
@@ -104,6 +110,9 @@ input {
         display: none;
     }
     .menu-footer {
+        display: none;
+    }
+    .row-group {
         display: none;
     }
 }
