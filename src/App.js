@@ -6,9 +6,7 @@ import {
     Link
 } from 'react-router-dom';
 
-import My from './my';
-import Saved from './saved';
-import Category from './category';
+import {My, Saved, Category} from './pages';
 import './App.scss';
 
 const routes = [

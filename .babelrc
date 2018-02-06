@@ -1,0 +1,8 @@
+{
+    "presets": ["es2015", "react"],
+    "plugins": [
+        "transform-export-extensions",
+        "transform-react-jsx",
+        "transform-react-constant-elements"
+    ]
+}
