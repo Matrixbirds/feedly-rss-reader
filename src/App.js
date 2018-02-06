@@ -84,7 +84,7 @@ class Menu extends React.Component {
                         <div className="row">
                             <span className="cell">
                                 <h5>BOARDS</h5>
-                                <i class="fas fa-cog cell-icon-right" />
+                                <i className="fas fa-cog cell-icon-right" />
                             </span>
                         </div>
                     {

@@ -1,10 +1,12 @@
 import React from 'react'
-export default class My extends React.Component {
+import Layout from './layout';
+
+export default class Category extends React.Component {
     render () {
         return (
-            <div>
+            <Layout>
                 <h2>my</h2>
-            </div>
+            </Layout>
         )
     }
 }
