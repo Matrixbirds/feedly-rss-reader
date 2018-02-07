@@ -139,6 +139,7 @@ input {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        min-width: 700px;
         padding: 0 15rem;
         .grid {
             display: flex;
